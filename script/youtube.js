@@ -1,7 +1,9 @@
 let player;
 
-// youtube button click event
-function videoButtonClick() {
+/**
+ * youtube button click event
+ */
+function onVideoButtonClick() {
   const url = document.getElementById("youtube_url").value;
 
   if (!url) {
@@ -21,14 +23,20 @@ function videoButtonClick() {
   player ? onVideoIdChange(id) : onYouTubeIframeAPIReady(id);
 }
 
-// video id change event
+/**
+ * video id change event
+ * @param id 변경할 영상 고유 ID
+ */
 function onVideoIdChange(id) {
   if (id) {
     player.loadVideoById(id);
   }
 }
 
-// youtube setting
+/**
+ * youtube setting
+ * @param id 영상 고유 ID
+ */
 function onYouTubeIframeAPIReady(id) {
   if (id) {
     player = new YT.Player("player", {
