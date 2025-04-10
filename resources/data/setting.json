@@ -2,6 +2,10 @@ tabs = [
   {
     "tab": "dice",
     "tabDesc": "주사위"
+  },
+  {
+    "tab": "2048",
+    "tabDesc": "2048"
   }
 ];
 

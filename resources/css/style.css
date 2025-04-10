@@ -1,0 +1,10 @@
+@layer style {
+    .tabs {
+        display: flex;
+    }
+
+    .control-panel {
+        width: 100%;
+    }
+
+}

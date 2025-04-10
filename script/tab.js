@@ -46,18 +46,12 @@ function onTabClick(id) {
   }
 
   // ID에 맞는 콘텐츠 추가
-  let iframe = document.createElement("iframe");
-  iframe.id = "contents";
-  iframe.src = `src/${id}.html`;
-  iframe.width = "100%";
-  iframe.height = "100%";
   let object = document.createElement("object");
   object.type = "text/html";
   object.data = `src/${id}.html`;
   object.width = "100%";
   object.height = "100%";
 
-  ctrlPanel.appendChild(iframe);
   ctrlPanel.appendChild(object);
 }
 
@@ -72,10 +66,6 @@ function clear() {
   }
 
   // 콘텐츠
-  const iframe = document.getElementById("contents");
-  if (iframe) {
-    iframe.remove();
-  }
   const object = document.getElementsByTagName("object")[0];
   if (object) {
     object.remove();
